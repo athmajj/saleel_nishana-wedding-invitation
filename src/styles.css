@@ -96,6 +96,25 @@ body.lock {
 }
 
 @media (min-width: 768px) {
+  .app-viewport {
+    padding: 24px 20px 48px;
+    background:
+      radial-gradient(circle at 50% 5%, rgba(184, 153, 90, 0.18) 0%, transparent 50%),
+      radial-gradient(circle at 12% 25%, #dce8f4 0%, transparent 45%),
+      radial-gradient(circle at 88% 75%, #cadcf0 0%, transparent 45%),
+      #e5eef7;
+  }
+
+  main.main-flow,
+  .intro-card-frame {
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow:
+      0 25px 80px -15px rgba(27, 38, 59, 0.38),
+      0 0 0 1.5px rgba(184, 153, 90, 0.5),
+      0 0 0 8px rgba(255, 255, 255, 0.6);
+  }
+
   .preview-switcher-bar {
     position: fixed;
     top: 14px;
@@ -1149,6 +1168,20 @@ section.pg {
 .monogram-sm .monogram-img {
   width: 78px;
   max-width: 26vw;
+}
+
+@media (max-width: 767px) {
+  .app-viewport {
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  main.main-flow,
+  .intro-card-frame {
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

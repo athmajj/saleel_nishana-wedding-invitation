@@ -72,7 +72,7 @@ export const CONFIG = {
   // WhatsApp Share
   whatsappButtonLabel: 'Share on WhatsApp',
   whatsappShareMessage:
-    'With the blessings of our families, we warmly invite you to celebrate the wedding of Adv. Saleel Nelliyali & Nishana Sherin on Saturday, 12 December 2026 at Koyas Convention Center, Valiyaparambu.\n\n📍 Location: https://maps.app.goo.gl/VqfJzfvG8rgnvQBaA',
+    'With the blessings of our families, we warmly invite you to celebrate the wedding of Adv. Saleel Nelliyali & Nishana Sherin on Saturday, 12 December 2026.\n\n💌 Digital Invitation:\nhttps://github.com/athmajj/saleel_nishana-wedding-invitation\n\n📍 Venue Location:\nhttps://maps.app.goo.gl/VqfJzfvG8rgnvQBaA',
 
   // Background Music
   MUSIC_SRC: '/music.mp3',

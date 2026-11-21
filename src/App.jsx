@@ -13,7 +13,7 @@ export default function App() {
   const [isOpened, setIsOpened] = useState(false);
   const [coverMounted, setCoverMounted] = useState(true);
   const [muted, setMuted] = useState(false);
-  const [previewMode, setPreviewMode] = useState('mobile'); // 'mobile' | 'desktop'
+  const [previewMode, setPreviewMode] = useState('desktop'); // default to 'desktop' card view
 
   const audioElRef = useRef(null);
   const synthRef = useRef(null);
@@ -99,6 +99,14 @@ export default function App() {
     if (synthRef.current) {
       synthRef.current.setMuted(nextMuted);
     }
+  };
+
+  const handleShareWhatsApp = (e) => {
+    e.preventDefault();
+    const siteUrl = typeof window !== 'undefined' ? window.location.href.split('#')[0] : '';
+    const shareText = `With the blessings of our families, we warmly invite you to celebrate the wedding of Adv. Saleel Nelliyali & Nishana Sherin on Saturday, 12 December 2026.\n\n💌 Digital Invitation:\n${siteUrl}\n\n📍 Venue Location:\nhttps://maps.app.goo.gl/VqfJzfvG8rgnvQBaA`;
+    const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -409,6 +417,7 @@ export default function App() {
                 href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
                   CONFIG.whatsappShareMessage
                 )}`}
+                onClick={handleShareWhatsApp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp"
